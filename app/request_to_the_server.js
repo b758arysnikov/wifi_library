@@ -1,8 +1,11 @@
 
-class ServerRequest {
+ export class ServerRequest {
     constructor(url){
         this.url = url;
     }
+    
+
+    
 
     async fethData() {
         try {
@@ -18,8 +21,3 @@ class ServerRequest {
     }
 }
 
-const urlData = "https://apidata.mos.ru/v1/datasets/60788/rows?api_key=553083a7-1c08-4000-a53c-9ab2318390e7";
-const serverRequest = new ServerRequest(urlData);
-
-serverRequest.fethData()
-    .then(data => console.log(data));
